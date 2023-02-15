@@ -16,6 +16,9 @@ public class App {
         System.out.println("Cargo de Gerente: "+ gerente.getCargo());
         System.out.println("Bono de Gerente: "+ gerente.getBono(100));
         System.out.println();
+        Control control = new Control();
+        control.getControlBono(funcionario);
+        control.getControlBono(gerente);
         
 
     }
