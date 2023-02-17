@@ -1,6 +1,6 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        Funcionario funcionario = new Funcionario("Juan", "12345678", 2000);
+        Funcionario funcionario = new Contador("Juan", "12345678", 2000);
         System.out.println();
         System.out.println("Nombre de funcionario: "+funcionario.getNombre());
         System.out.println("Documento de funcionario: "+funcionario.getDocumento());

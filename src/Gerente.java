@@ -7,9 +7,10 @@ public class Gerente extends Funcionario {
         this.departamento = departamento;
         this.cargo = cargo;
     }
-
+    
+    @Override
     public double getBono(double porcentaje) {
-        return super.getSalario() * porcentaje / 100 + super.getBono(10);
+        return super.getSalario() * porcentaje / 100 + super.getSalario() * 0.1;
     }
     
     public String getDepartamento() {

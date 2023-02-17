@@ -1,5 +1,5 @@
 
-public class Funcionario {
+public abstract class Funcionario {
     private String nombre;
     private String documento;
     private double salario;
@@ -10,9 +10,7 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public double getBono(double porcentaje) {
-        return salario * porcentaje / 100;
-    }
+    public abstract double getBono(double porcentaje);
 
     public String getNombre() {
         return nombre;
