@@ -1,6 +1,7 @@
-public class Gerente extends Funcionario {
+public class Gerente extends Autenticable {
     private String departamento;
     private String cargo;
+    private String clave;
     
     public Gerente(String nombre, String documento, double salario, String departamento, String cargo) {
         super(nombre, documento, salario);
@@ -11,6 +12,10 @@ public class Gerente extends Funcionario {
     @Override
     public double getBono(double porcentaje) {
         return super.getSalario() * porcentaje / 100 + super.getSalario() * 0.1;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
     }
     
     public String getDepartamento() {
@@ -24,6 +29,10 @@ public class Gerente extends Funcionario {
     }
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+
+    public boolean iniciarSeccion(String clave) {
+        return clave == "La clave";
     }
     
 }
