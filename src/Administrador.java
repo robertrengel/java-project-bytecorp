@@ -1,8 +1,10 @@
-public class Administrador extends Autenticable {
+public class Administrador extends Funcionario implements Autenticable {
+
+    private AutUtil util;
 
     public Administrador(String nombre, String documento, double salario) {
         super(nombre, documento, salario);
-        //TODO Auto-generated constructor stub
+        this.util = new AutUtil();
     }
 
     @Override
@@ -10,5 +12,15 @@ public class Administrador extends Autenticable {
         // TODO Auto-generated method stub
         return 0;
     }
-    
+
+    @Override
+    public boolean iniciarSeccion(String clave) {
+        return util.iniciarSeccion(clave);
+    }
+
+    @Override
+    public void setClave(String clave) {
+        util.setClave(clave);
+    }
+
 }

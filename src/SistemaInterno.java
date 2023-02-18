@@ -2,8 +2,8 @@ public class SistemaInterno {
     private String clave = "La clave";
 
     // public boolean autenticar(Autenticar gerente) {
-    //     boolean autenticado = gerente.iniciarSeccion(clave);
-    //     return this.clave.equals(clave);
+    // boolean autenticado = gerente.iniciarSeccion(clave);
+    // return this.clave.equals(clave);
     // }
 
     public boolean autenticar(Autenticable autenticable) {

@@ -1,8 +1,13 @@
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         Gerente gerente = new Gerente("Juan", "12345678", 5000, "Sistemas", "Gerente");
         Administrador administrador = new Administrador("Juan", "12345678", 5000);
+        Cliente cliente = new Cliente("Juan", "12345678");
         SistemaInterno sistemaInterno = new SistemaInterno();
+        cliente.setClave("La clave");
+        gerente.setClave("La clave");
+        administrador.setClave("La clave");
+        sistemaInterno.autenticar(cliente);
         sistemaInterno.autenticar(gerente);
         sistemaInterno.autenticar(administrador);
         // Funcionario funcionario = new Contador("Juan", "12345678", 2000);
